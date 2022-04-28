@@ -76,8 +76,6 @@ jQuery(function ($) {
 
   $("#contact-submit").click(function (e) {
     //stop the form from being submitted
-    e.preventDefault();
-
     /* declare the variables, var error is the variable that we use on the end
 		to determine if there was an error or not */
     var error = false;
