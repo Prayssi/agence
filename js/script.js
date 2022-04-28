@@ -128,8 +128,9 @@ jQuery(function ($) {
       //and change the button text to Sending...
       $("#contact-submit").attr({
         disabled: "false",
-        value: "Sending...",
+        value: "Envoyé",
       });
+      $("#mail-success").fadeIn(500);
     }
   });
 });
