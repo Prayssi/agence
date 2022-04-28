@@ -988,6 +988,9 @@ a:focus, a:hover {
 /*=================================================================
   Portfolio section
 ==================================================================*/
+.portfolio {
+  background-color: #292F33;
+}
 .portfolio-filter {
   margin-bottom: 40px;
   text-align: center;
