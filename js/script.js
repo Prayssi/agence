@@ -75,7 +75,7 @@ jQuery(function ($) {
 	/* ========================================================================= */
 
   $("#contact-submit").click(function (e) {
-    //stop the form from being submitted
+    e.preventDefault();
     /* declare the variables, var error is the variable that we use on the end
 		to determine if there was an error or not */
     var error = false;
@@ -128,7 +128,16 @@ jQuery(function ($) {
         disabled: "false",
         value: "Envoyé",
       });
-      $("#mail-success").fadeIn(500);
+
+      let myForm = document.getElementById("contact-form");
+      let formData = new FormData(myForm);
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      })
+        .then(() => $("#mail-success").fadeIn(500))
+        .catch((error) => $("#mail-fail").fadeIn(500));
     }
   });
 });
