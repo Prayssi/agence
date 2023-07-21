@@ -1034,6 +1034,7 @@ a:hover {
   font-weight: 700;
   color: #737f8a;
   transition: 0.3s all;
+  margin-bottom: 5px;
 }
 
 .portfolio-filter button.mixitup-control-active {
