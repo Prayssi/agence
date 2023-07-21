@@ -801,7 +801,7 @@ Start Call To Action
       var saveBtn = document.getElementById("vcard");
       saveBtn.addEventListener("click", function () {
         var vcard =
-          "BEGIN:VCARD\nVERSION:3.0\nN:zf\nFN:qsdf\nORG:\nTITLE:\nPHOTO;TYPE=JPEG;ENCODING=b:[]\nTEL;TYPE=WORK,VOICE:\nADR;TYPE=WORK,PREF:;;\nEMAIL:qsdf\nREV:2023-07-21T15:44:19.500Z\nEND:VCARD";
+          "BEGIN:VCARD\nVERSION:3.0\nFN;CHARSET=UTF-8:Tom Latouche-Hallé\nN;CHARSET=UTF-8:Latouche-Hallé;Tom;;;\nEMAIL;CHARSET=UTF-8;type=HOME,INTERNET:latouchehalle@gmail.com\nTEL;TYPE=WORK,VOICE:0614136823\nTITLE;CHARSET=UTF-8:Expert Google Freelance\nURL;type=WORK;CHARSET=UTF-8:https://latouche-halle.fr\nREV:2023-07-21T15:45:28.226Z\nEND:VCARD\n";
         var blob = new Blob([vcard], { type: "text/vcard" });
         var url = URL.createObjectURL(blob);
 
